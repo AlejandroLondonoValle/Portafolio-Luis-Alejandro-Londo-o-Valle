@@ -1,0 +1,104 @@
+:root {
+    color-scheme: dark;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1220;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.nav-shell {
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.35) 100%);
+    backdrop-filter: saturate(140%) blur(22px);
+    box-shadow: 0 24px 60px rgba(11, 17, 29, 0.45);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-shell:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+    .nav-shell {
+        border-radius: 24px;
+        border-width: 0;
+        background: rgba(15, 23, 42, 0.55);
+        box-shadow: none;
+    }
+}
+
+.glass-card {
+    border-color: rgba(226, 232, 240, 0.12) !important;
+    background: rgba(15, 23, 42, 0.62) !important;
+    backdrop-filter: blur(24px) saturate(140%);
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.55) !important;
+    box-shadow: 0 25px 60px -30px rgba(56, 189, 248, 0.7);
+}
+
+.equal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.equal-card > ul {
+    margin-top: auto;
+}
+
+.status-message {
+    min-height: 1.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.status-message.is-hidden {
+    opacity: 0;
+}
+
+.status-message.is-success {
+    color: #4ade80;
+}
+
+.status-message.is-error {
+    color: #f87171;
+}
+
+.submit-button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-button .spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(15, 23, 42, 0.25);
+    border-top-color: rgb(15, 23, 42);
+    border-radius: 9999px;
+    animation: spin 0.75s linear infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
