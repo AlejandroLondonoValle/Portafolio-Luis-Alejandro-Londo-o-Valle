@@ -82,3 +82,63 @@ if (form && statusMessage) {
     form.addEventListener('submit', handleSubmit);
 }
 
+
+const repos = [
+    "AlejandroLondonoValle/AlexBreaker",
+    "AlejandroLondonoValle/Homes-CO",
+    "AlejandroLondonoValle/Portafolio-Luis-Alejandro-Londo-o-Valle"
+];
+
+const container = document.getElementById("repos-container");
+
+async function cargarRepos() {
+    for (const repo of repos) {
+        const url = `https://api.github.com/repos/${repo}`;
+        const res = await fetch(url);
+        const data = await res.json();
+
+        const card = document.createElement("article");
+        card.className =
+            "glass-card relative overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-8 shadow-[0_45px_90px_-30px_rgba(56,189,248,0.6)] cursor-pointer transition hover:-translate-y-1";
+
+        card.onclick = () => window.open(data.html_url, "_blank");
+
+        card.innerHTML = `
+            <div class="absolute left-0 top-0 h-1 w-32 bg-highlight"></div>
+
+            <h3 class="mt-6 font-heading text-2xl font-semibold text-white">
+                ${data.name}
+            </h3>
+
+            <p class="mt-4 text-sm text-slate-300">
+                ${data.description || "Este repositorio no tiene descripción."}
+            </p>
+
+            <div class="mt-6 grid grid-cols-2 gap-4 text-xs text-slate-400">
+                <div class="rounded-3xl border border-white/10 bg-white/5 p-4">
+                    <p>Lenguaje</p>
+                    <p class="mt-2 text-lg font-semibold text-white">
+                        ${data.language || "N/A"}
+                    </p>
+                </div>
+
+                <div class="rounded-3xl border border-white/10 bg-white/5 p-4">
+                    <p>Última actualización</p>
+                    <p class="mt-2 text-lg font-semibold text-white">
+                        ${new Date(data.updated_at).toLocaleDateString()}
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-400">
+                    ⭐ ${data.stargazers_count} stars
+                </span>
+            </div>
+        `;
+
+        container.appendChild(card);
+    }
+}
+
+cargarRepos();
