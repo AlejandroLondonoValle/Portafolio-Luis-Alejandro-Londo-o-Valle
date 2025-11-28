@@ -2,7 +2,7 @@ const form = document.querySelector('#contact-form');
 const statusMessage = document.querySelector('#form-status');
 const submitButton = form?.querySelector('.submit-button');
 
-const ENDPOINT = 'https://formsubmit.co/ajax/luis@backendcraft.dev';
+const ENDPOINT = 'https://formsubmit.co/ajax/londonovalleluisalejandro@gmail.com';
 
 const setStatus = (message, type = 'info') => {
     if (!statusMessage) return;
