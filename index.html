@@ -680,19 +680,18 @@
                         </div>
 
                         <!-- FORMULARIO -->
-                        <form id="contact-form" class="space-y-6">
-
+                        <form id="contact-form" action="https://formspree.io/f/xblvqrvp" method="POST" class="space-y-6">
                             <div>
                                 <label for="name"
                                     class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Nombre</label>
-                                <input id="name" type="text" placeholder="Tu nombre"
+                                <input id="name" name="name" type="text" placeholder="Tu nombre"
                                     class="mt-2 w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-highlight/60 focus:outline-none focus:ring-2 focus:ring-highlight/40">
                             </div>
 
                             <div>
                                 <label for="email"
                                     class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Email</label>
-                                <input id="email" type="email" placeholder="tu@empresa.com"
+                                <input id="email" name="email" type="email" placeholder="tu@empresa.com"
                                     class="mt-2 w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-highlight/60 focus:outline-none focus:ring-2 focus:ring-highlight/40">
                             </div>
 
@@ -700,34 +699,41 @@
                                 <label for="tipo"
                                     class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Tipo de
                                     proyecto</label>
-                                <select id="tipo"
+                                <select id="tipo" name="projectType"
                                     class="mt-2 w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white focus:border-highlight/60 focus:outline-none focus:ring-2 focus:ring-highlight/40">
-                                    <option class="bg-base">API en C# / .NET</option>
-                                    <option class="bg-base">Dashboard administrativo</option>
-                                    <option class="bg-base">Pentesting (entorno controlado)</option>
-                                    <option class="bg-base">Sitio web HTML/CSS/JS</option>
-                                    <option class="bg-base">Automatización o herramientas internas</option>
-                                    <option class="bg-base">Propuesta laboral</option>
+                                    <option class="bg-base">E-commerce</option>
+                                    <option class="bg-base">Web corporativa</option>
+                                    <option class="bg-base">Backend/API</option>
+                                    <option class="bg-base">Pentesting</option>
                                 </select>
                             </div>
 
                             <div>
                                 <label for="detalle"
                                     class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Detalles</label>
-                                <textarea id="detalle" rows="4" placeholder="Cuéntame qué necesitas construir o mejorar"
+                                <textarea id="detalle" name="details" rows="4" placeholder="Cuéntame sobre tu reto"
                                     class="mt-2 w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-highlight/60 focus:outline-none focus:ring-2 focus:ring-highlight/40"></textarea>
                             </div>
 
                             <button type="submit"
                                 class="submit-button w-full rounded-full bg-highlight px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-highlight/90">
-                                Enviar mensaje
+                                Enviar
                             </button>
-
-                            <p id="form-status" class="status-message text-center text-xs text-slate-400">
-                                Respuesta en menos de 24 horas
-                            </p>
-
                         </form>
+
+                        <!-- Contenedor de alerta -->
+                        <div id="alert-modal"
+                            class="fixed inset-0 hidden items-center justify-center bg-black/50 backdrop-blur">
+                            <div class="rounded-3xl bg-base border border-white/10 p-8 text-center max-w-sm">
+                                <h3 class="text-xl font-semibold text-white mb-2">¡Enviado con éxito!</h3>
+                                <p class="text-slate-300 text-sm">Gracias por tu mensaje. Te responderé en menos de 24
+                                    horas.</p>
+                                <button id="close-alert"
+                                    class="mt-6 rounded-full bg-highlight/80 px-6 py-2 text-slate-900 hover:bg-highlight">
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

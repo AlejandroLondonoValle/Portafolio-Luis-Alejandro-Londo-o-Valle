@@ -124,3 +124,22 @@ p {
     border-radius: 12px;
     display: block;
 }
+
+/* Forzar menú desplegable en modo oscuro */
+select,
+select option {
+    background-color: #0f172a !important; /* Azul oscuro elegante */
+    color: #e2e8f0 !important;           /* Texto gris claro */
+}
+
+/* Resaltar opción seleccionada */
+select option:checked {
+    background-color: #1e293b !important;
+    color: #fff !important;
+}
+
+/* En hover del menú */
+select option:hover {
+    background-color: #334155 !important;
+    color: #fff !important;
+}
