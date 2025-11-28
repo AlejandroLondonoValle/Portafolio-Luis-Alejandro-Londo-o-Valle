@@ -58,7 +58,7 @@ p {
     height: 100%;
 }
 
-.equal-card > ul {
+.equal-card>ul {
     margin-top: auto;
 }
 
@@ -102,3 +102,25 @@ p {
     }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.pdf-thumb:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+.certificate-card img {
+    height: 160px;           /* Ajusta la altura visible */
+    width: 100%;
+    object-fit: cover;       /* Recorta la imagen sin deformarla */
+    object-position: top;    /* Toma la parte superior del certificado */
+    border-radius: 12px;
+    display: block;
+}

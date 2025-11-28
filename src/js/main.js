@@ -142,3 +142,84 @@ async function cargarRepos() {
 }
 
 cargarRepos();
+
+const pdfFolder = "src/assets/certificaciones";
+
+const pdfFiles = [
+    "Administracion de Inventario.pdf",
+    "Backend Junior Riwi.pdf",
+    "Certificado Smart A1.pdf",
+    "Ciencia e Ingenieria de Datos @medellin.pdf",
+    "Curso IA con Google.pdf",
+    "Flujo de Caja.pdf",
+    "Liderazgo Eficaz.pdf",
+    "Mentalidad Exitosa.pdf",
+    "Propuesta Unica de Valor.pdf",
+    "Python Skilio.pdf",
+    "Ventas en Linea.pdf"
+];
+
+const pdfCarousel = document.getElementById("pdfCarousel");
+
+// Función para quitar ".pdf" y formatear bonito
+function cleanTitle(name) {
+    return name.replace(".pdf", "").replace(/_/g, " ");
+}
+
+pdfFiles.forEach(async (file) => {
+    const url = `${pdfFolder}/${file}`;
+
+    // Crear tarjeta
+    const card = document.createElement("div");
+    card.className =
+        "glass-card min-w-[280px] max-w-xs rounded-3xl border border-white/10 bg-white/5 p-6";
+
+    // Crear canvas donde irá la miniatura real
+    const canvas = document.createElement("canvas");
+    canvas.className = "rounded-xl border border-white/20 w-full";
+
+    // Cargar PDF y renderizar miniatura
+    try {
+        const pdf = await pdfjsLib.getDocument(url).promise;
+        const page = await pdf.getPage(1);
+
+        const viewport = page.getViewport({ scale: 0.4 });
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        await page.render({
+            canvasContext: canvas.getContext("2d"),
+            viewport: viewport,
+        }).promise;
+
+    } catch (err) {
+        console.error("Error cargando miniatura del PDF:", file, err);
+        canvas.insertAdjacentHTML("beforebegin", "<div>Sin vista previa</div>");
+    }
+
+    // Estructura dentro de la tarjeta
+    card.innerHTML = `
+        <div class="mt-3 text-sm font-medium text-white truncate">${cleanTitle(file)}</div>
+
+        <div class="flex justify-between mt-4 text-sm">
+            <a href="${url}" target="_blank" class="text-highlight hover:underline">Ver</a>
+            <a href="${url}" download class="text-slate-300 hover:underline">Descargar</a>
+        </div>
+    `;
+
+    // Poner el canvas encima del contenido
+    card.prepend(canvas);
+
+    pdfCarousel.appendChild(card);
+});
+
+// Botones carrusel
+document.getElementById("pdfNext").onclick = () => {
+    pdfCarousel.scrollBy({ left: 300, behavior: "smooth" });
+};
+
+document.getElementById("pdfPrev").onclick = () => {
+    pdfCarousel.scrollBy({ left: -300, behavior: "smooth" });
+};
+
+canvas.className = "rounded-xl border border-white/20 w-full pdf-thumb";

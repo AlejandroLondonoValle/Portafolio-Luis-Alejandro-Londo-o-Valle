@@ -103,18 +103,33 @@
 
             <section
                 class="mx-auto flex max-w-6xl flex-col-reverse gap-12 px-6 pb-24 pt-10 lg:flex-row lg:items-center lg:px-8">
+
                 <div class="flex-1 space-y-10">
-                    <span
-                        class="inline-flex items-center gap-2 rounded-full border border-highlight/50 bg-highlight/15 px-4 py-1 text-xs font-medium uppercase tracking-[0.32em] text-highlight">Desarrollador
-                        Backend Junior</span>
-                    <h1 class="font-heading text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                        Acerca de mi
-                    </h1>
+                    <div class="flex items-center gap-6">
+                        <!-- Imagen -->
+                        <img src="src/imgs/imagen-perfil.jpg" alt="Foto de perfil"
+                            class="h-60 w-60 rounded-full object-cover object-top border border-white/20 shadow-[0_0_35px_rgba(56,189,248,0.45)]">
+
+                        <!-- Texto alineado al centro -->
+                        <div class="flex flex-col justify-center -mt-2">
+
+                            <span class="inline-flex items-center gap-1.5 rounded-full border border-highlight/40 bg-highlight/10 
+                   px-2.5 py-0.5 text-[0.60rem] font-medium uppercase tracking-[0.20em] text-highlight">
+                                Desarrollador Backend Junior
+                            </span>
+
+                            <h1 class="font-heading text-4xl font-semibold leading-tight mt-2">
+                                Acerca de mi
+                            </h1>
+                        </div>
+                    </div>
+
                     <p class="max-w-2xl text-base text-slate-300 sm:text-lg">
                         Soy un apasionado por el desarrollo de software, actualmente cursando el segundo trimestre de la
                         Tecnología en Análisis y Desarrollo de Software (ADSO) en el SENA y llevando a cabo mi formación
                         profesional en Ingeniería de Software en el Tecnológico de Antioquia (TdeA).
                     </p>
+
                     <div class="flex flex-wrap gap-4">
                         <a href="src/assets/Hoja de Vida.pdf" download target="_blank"
                             class="group flex items-center gap-2 rounded-full bg-highlight px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:bg-highlight/90">
@@ -124,6 +139,7 @@
                             </svg>
                             Descargar CV
                         </a>
+
                         <a href="https://co.linkedin.com/in/lu%C3%ADs-alejandro-londo%C3%B1o-valle" target="_blank"
                             class="flex items-center gap-2 rounded-full border border-highlight/40 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-highlight/60 hover:bg-highlight/10">
                             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -134,6 +150,7 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="flex-1">
                     <div
                         class="relative mx-auto max-w-xl overflow-hidden rounded-[44px] border border-white/10 bg-card p-8 shadow-[0_40px_80px_-30px_rgba(56,189,248,0.7)] backdrop-blur-xl">
@@ -144,8 +161,7 @@
                             <div class="flex items-start justify-between">
                                 <div>
                                     <p class="text-xs uppercase tracking-[0.35em] text-slate-400">Proyecto destacado</p>
-                                    <p class="mt-2 text-2xl font-semibold text-white">RestAdmin API
-                                    </p>
+                                    <p class="mt-2 text-2xl font-semibold text-white">RestAdmin API</p>
                                 </div>
                             </div>
 
@@ -165,8 +181,10 @@
                                 <p class="text-xs uppercase tracking-[0.3em] text-highlight">Impacto reciente</p>
                                 <p class="mt-3 leading-relaxed">
                                     Desarrollo de RestAdmin, una API de facturación para restaurantes que gestiona
-                                    pedidos, facturas y clientes. Incluye CRUD completo, consultas avanzadas, seguridad
-                                    por roles y documentación interactiva con Swagger.
+                                    pedidos,
+                                    facturas y clientes. Incluye CRUD completo, consultas avanzadas, seguridad por roles
+                                    y
+                                    documentación interactiva con Swagger.
                                 </p>
                             </div>
 
@@ -189,6 +207,7 @@
                 </div>
 
             </section>
+
         </header>
 
         <main class="relative z-10">
@@ -408,146 +427,199 @@
                 <!-- CONTENEDOR DINÁMICO -->
                 <div id="repos-container" class="grid gap-8 xl:grid-cols-3"></div>
             </section>
+            <!-- Aqui Voy -->
             <section id="estudios" class="bg-white/5 py-16 backdrop-blur">
                 <div class="mx-auto max-w-6xl px-6 lg:px-8">
+
+                    <!-- Encabezado -->
                     <div class="mb-12 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                         <div>
-                            <span class="text-xs uppercase tracking-[0.3em] text-highlight">Estudios y
-                                certificaciones</span>
-                            <h2 class="mt-3 font-heading text-3xl font-semibold text-white sm:text-4xl">Formación que
-                                respalda la ejecución</h2>
-                            <p class="mt-4 max-w-2xl text-slate-300">Me mantengo al día con programas especializados,
-                                certificaciones cloud y contribuciones a la comunidad técnica.</p>
+                            <span class="text-xs uppercase tracking-[0.3em] text-highlight">Formación</span>
+                            <h2 class="mt-3 font-heading text-3xl font-semibold text-white sm:text-4xl">
+                                Mi camino académico y técnico
+                            </h2>
+                            <p class="mt-4 max-w-2xl text-slate-300">
+                                Una trayectoria construida paso a paso, desde la educación básica hasta mi
+                                formación técnica y profesional en desarrollo de software.
+                            </p>
                         </div>
+
                         <div
                             class="flex h-24 w-24 items-center justify-center rounded-full border border-highlight/40 bg-highlight/10 text-highlight">
                             <span class="text-2xl font-semibold">+900h</span>
                         </div>
                     </div>
+
                     <div class="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+
+                        <!-- Trayectoria Académica -->
                         <div
-                            class="glass-card space-y-6 rounded-4xl border border-white/10 bg-base/70 p-10 shadow-[0_45px_90px_-35px_rgba(168,85,247,0.6)]">
+                            class="glass-card space-y-6 rounded-4xl border border-white/10 bg-base/70 p-10 shadow-[0_45px_90px_-35px_rgba(56,189,248,0.45)]">
+
                             <h3 class="font-heading text-2xl font-semibold text-white">Trayectoria académica</h3>
-                            <ol class="relative space-y-8">
+
+                            <ol class="relative space-y-10">
+
+                                <!-- Colegio -->
                                 <li class="border-l border-highlight/40 pl-6">
-                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">2013 - 2018</span>
-                                    <h4 class="mt-2 text-lg font-semibold text-white">Ingeniería de Sistemas ·
-                                        Universidad de Antioquia</h4>
-                                    <p class="mt-2 text-sm text-slate-300">Enfoque en arquitecturas distribuidas,
-                                        ingeniería de software y seguridad informática.</p>
+                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">2011 - 2023</span>
+                                    <h4 class="mt-2 text-lg font-semibold text-white">
+                                        Institución Educativa José María Bernal
+                                    </h4>
+                                    <p class="mt-2 text-sm text-slate-300">Bachiller Académico.</p>
                                 </li>
+
+                                <!-- Riwi -->
                                 <li class="border-l border-highlight/40 pl-6">
-                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">2020</span>
-                                    <h4 class="mt-2 text-lg font-semibold text-white">Diplomado en Arquitectura de
-                                        Software · U. de los Andes</h4>
-                                    <p class="mt-2 text-sm text-slate-300">Modelado de dominios, DDD avanzado, gestión
-                                        de riesgos técnicos y documentación estratégica.</p>
+                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">2024 - 2025</span>
+                                    <h4 class="mt-2 text-lg font-semibold text-white">Riwi</h4>
+                                    <p class="mt-2 text-sm text-slate-300">Desarrollador de Software – Backend Junior.
+                                    </p>
                                 </li>
+
+                                <!-- SENA -->
                                 <li class="border-l border-highlight/40 pl-6">
-                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">2022</span>
-                                    <h4 class="mt-2 text-lg font-semibold text-white">Programa SRE & DevOps · Google
-                                        Cloud</h4>
-                                    <p class="mt-2 text-sm text-slate-300">Implementación de prácticas SRE, monitoreo
-                                        con Ops Suite y diseño de SLOs.</p>
+                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">ACTUALIDAD</span>
+                                    <h4 class="mt-2 text-lg font-semibold text-white">
+                                        Servicio Nacional de Aprendizaje (SENA)
+                                    </h4>
+                                    <p class="mt-2 text-sm text-slate-300">
+                                        Tecnólogo en Análisis y Desarrollo de Software.<br>
+                                        <em>En curso – Finalización estimada: Octubre 2027</em>
+                                    </p>
                                 </li>
+
+                                <!-- TdeA -->
+                                <li class="border-l border-highlight/40 pl-6">
+                                    <span class="text-xs uppercase tracking-[0.3em] text-highlight">ACTUALIDAD</span>
+                                    <h4 class="mt-2 text-lg font-semibold text-white">
+                                        Tecnológico de Antioquia (TdeA)
+                                    </h4>
+                                    <p class="mt-2 text-sm text-slate-300">
+                                        Ingeniería de Software.<br>
+                                        <em>En curso – Finalización estimada: Julio 2030</em>
+                                    </p>
+                                </li>
+
                             </ol>
                         </div>
+
+                        <!-- Barras de progreso -->
                         <div class="space-y-6">
+
                             <div class="glass-card rounded-4xl border border-white/10 bg-white/5 p-8">
-                                <h3 class="font-heading text-lg font-semibold text-white">Certificaciones</h3>
-                                <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                                    <li>• AWS Certified Solutions Architect – Professional</li>
-                                    <li>• Google Cloud Professional Cloud Architect</li>
-                                    <li>• Certified Kubernetes Administrator (CKA)</li>
-                                    <li>• Certified Kubernetes Application Developer (CKAD)</li>
+                                <h3 class="font-heading text-lg font-semibold text-white">Dominio de Tecnologías</h3>
+
+                                <div class="mt-6 space-y-6 text-sm text-slate-300">
+
+                                    <!-- C# y .NET -->
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>C# / .NET</span><span>70%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-highlight rounded-full" style="width: 70%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Python -->
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Python</span><span>50%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-highlight rounded-full" style="width: 50%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Git -->
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>Git & GitHub</span><span>50%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-highlight rounded-full" style="width: 50%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- DOM -->
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>DOM</span><span>50%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-highlight rounded-full" style="width: 50%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- PHP -->
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span>PHP</span><span>40%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                            <div class="h-full bg-highlight rounded-full" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Card de Hackathons -->
+                            <div class="glass-card rounded-4xl border border-white/10 bg-white/5 p-8">
+                                <h3 class="font-heading text-lg font-semibold text-white">Hackathons destacadas</h3>
+
+                                <ul class="mt-4 space-y-4 text-sm text-slate-300">
+
+                                    <li class="border-l-2 border-highlight/40 pl-3">
+                                        <span class="text-xs uppercase tracking-[0.2em] text-highlight">1° Puesto</span>
+                                        <p class="mt-1">
+                                            <strong class="text-white">Hackathon Finhub — EAFIT</strong><br>
+                                            Organizada por Sistecrédito, Finhub y Protección. Proyecto ganador:
+                                            <strong class="text-white">CrediPass</strong>.
+                                        </p>
+                                    </li>
+                                    <li class="border-l-2 border-highlight/40 pl-3">
+                                        <span class="text-xs uppercase tracking-[0.2em] text-highlight">2° Puesto</span>
+                                        <p class="mt-1">
+                                            <strong class="text-white">Hackathon Colombia 4.0 — EAFIT</strong><br>
+                                            Competencia organizada por Google. Proyecto presentado:
+                                            <strong class="text-white">Movility AI</strong>.
+                                        </p>
+                                    </li>
+
                                 </ul>
                             </div>
-                            <div class="glass-card rounded-4xl border border-white/10 bg-white/5 p-8">
-                                <h3 class="font-heading text-lg font-semibold text-white">Contribuciones</h3>
-                                <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                                    <li>• Speaker en KubeCon EU 2023: Observabilidad impulsada por eventos</li>
-                                    <li>• Mentor en comunidades de Go y Node.js LATAM</li>
-                                    <li>• Autor de guías sobre FinOps y arquitectura hexagonal</li>
-                                </ul>
-                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </section>
 
             <section class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
-                <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-                    <div>
-                        <span class="text-xs uppercase tracking-[0.3em] text-highlight">Trayectoria</span>
-                        <h2 class="mt-4 font-heading text-3xl font-semibold text-white sm:text-4xl">Experiencia
-                            profesional</h2>
-                        <p class="mt-4 text-slate-300">He liderado equipos multidisciplinarios, integrando prácticas
-                            SRE, data-driven y automatización continua.</p>
-                        <ul class="mt-8 space-y-6">
-                            <li class="glass-card relative rounded-3xl border border-white/10 bg-white/5 p-6">
-                                <div class="flex items-center justify-between text-sm text-slate-400">
-                                    <span>2022 - Actualidad</span>
-                                    <span>Remoto</span>
-                                </div>
-                                <h3 class="mt-3 text-xl font-semibold text-white">Principal Backend Engineer · Nova Bank
-                                </h3>
-                                <p class="mt-3 text-sm text-slate-300">Migración completa a arquitectura serverless con
-                                    +200 microservicios coordinados mediante event bus y políticas de compliance
-                                    automatizadas.</p>
-                            </li>
-                            <li class="glass-card relative rounded-3xl border border-white/10 bg-white/5 p-6">
-                                <div class="flex items-center justify-between text-sm text-slate-400">
-                                    <span>2019 - 2022</span>
-                                    <span>CDMX</span>
-                                </div>
-                                <h3 class="mt-3 text-xl font-semibold text-white">Tech Lead Backend · HealthSync</h3>
-                                <p class="mt-3 text-sm text-slate-300">Implementación de data lake y dashboards clínicos
-                                    en tiempo real. Reducción del tiempo de respuesta médica en 37%.</p>
-                            </li>
-                            <li class="glass-card relative rounded-3xl border border-white/10 bg-white/5 p-6">
-                                <div class="flex items-center justify-between text-sm text-slate-400">
-                                    <span>2017 - 2019</span>
-                                    <span>Medellín</span>
-                                </div>
-                                <h3 class="mt-3 text-xl font-semibold text-white">Backend Engineer · DataBridge</h3>
-                                <p class="mt-3 text-sm text-slate-300">Construcción de APIs de alto rendimiento y
-                                    adopción de prácticas DevOps, integrando observabilidad desde el día uno.</p>
-                            </li>
-                        </ul>
+                <span class="text-xs uppercase tracking-[0.3em] text-highlight">Certificaciones</span>
+                <h2 class="mt-4 font-heading text-3xl font-semibold text-white sm:text-4xl">
+                    Mis Certificaciones
+                </h2>
+
+                <div class="relative mt-8">
+                    <button id="pdfPrev"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-highlight/20 text-highlight px-3 py-2 rounded-full backdrop-blur hover:bg-highlight/40">
+                        ‹
+                    </button>
+
+                    <div id="pdfCarousel" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar">
                     </div>
-                    <div class="space-y-6">
-                        <div class="glass-card rounded-3xl border border-white/10 bg-white/5 p-8">
-                            <h3 class="font-heading text-lg font-semibold text-white">KPIs clave</h3>
-                            <div class="mt-6 grid grid-cols-2 gap-6 text-sm">
-                                <div>
-                                    <p class="text-slate-400">Deploys al mes</p>
-                                    <p class="mt-2 text-2xl font-semibold text-white">+120</p>
-                                </div>
-                                <div>
-                                    <p class="text-slate-400">Incidentes P0</p>
-                                    <p class="mt-2 text-2xl font-semibold text-white">-82%</p>
-                                </div>
-                                <div>
-                                    <p class="text-slate-400">Tasa de éxito CI</p>
-                                    <p class="mt-2 text-2xl font-semibold text-white">99.1%</p>
-                                </div>
-                                <div>
-                                    <p class="text-slate-400">Tiempo medio de reparación</p>
-                                    <p class="mt-2 text-2xl font-semibold text-white">34 min</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="glass-card rounded-3xl border border-white/10 bg-white/5 p-8">
-                            <h3 class="font-heading text-lg font-semibold text-white">Iniciativas destacadas</h3>
-                            <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                                <li>• Creación de guilds técnicos para estándares de código y calidad</li>
-                                <li>• Implementación de FinOps y dashboards ejecutivos en Looker</li>
-                                <li>• Programas de mentoría para squads de backend y data</li>
-                            </ul>
-                        </div>
-                    </div>
+
+                    <button id="pdfNext"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-highlight/20 text-highlight px-3 py-2 rounded-full backdrop-blur hover:bg-highlight/40">
+                        ›
+                    </button>
                 </div>
             </section>
+
+
 
             <section id="contacto" class="bg-gradient-to-br from-white/10 via-base to-base py-16">
                 <div
@@ -653,7 +725,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script type="module" src="src/js/main.js"></script>
+
 </body>
 
 </html>
